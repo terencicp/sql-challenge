@@ -17,10 +17,8 @@ GROUP BY day;
 -- orders_per_day_of_the_week_and_hour
 WITH OrderDayHour AS (
     SELECT
-        -- Day of the week as integer (Sunday=7)
-        CAST(strftime('%w', order_purchase_timestamp) AS INTEGER) AS day_of_week_int,
         -- Day of the week abreviated
-        CASE strftime('%w', order_purchase_timestamp)
+        CASE STRFTIME('%w', order_purchase_timestamp)
             WHEN '1' THEN 'Mon'
             WHEN '2' THEN 'Tue'
             WHEN '3' THEN 'Wed'
@@ -29,8 +27,10 @@ WITH OrderDayHour AS (
             WHEN '6' THEN 'Sat'
             WHEN '0' THEN 'Sun'
             END AS day_of_week_name,
+        -- Day of the week as integer (Sunday=7)
+        CAST(STRFTIME('%w', order_purchase_timestamp) AS INTEGER) AS day_of_week_int,
         -- Hour of the day (0-24)
-        CAST(strftime("%H", order_purchase_timestamp) AS INTEGER) AS hour
+        CAST(STRFTIME("%H", order_purchase_timestamp) AS INTEGER) AS hour
     FROM orders
 )
 SELECT
