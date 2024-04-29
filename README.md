@@ -2,11 +2,11 @@
 
 The 11 .sql files contain the queries from a Kaggle notebook I wrote to showcase the capabilities of SQL for data analysis. To run these queries, download the SQLite database file from:
 
-[E-commerce dataset by Olist (SQLite)](https://www.kaggle.com/datasets/terencicp/e-commerce-dataset-by-olist-as-an-sqlite-database)
+[Kaggle dataset: E-commerce dataset by Olist (SQLite)](https://www.kaggle.com/datasets/terencicp/e-commerce-dataset-by-olist-as-an-sqlite-database)
 
-For more information on how to use the database and some context on the SQL queries on each file, have a look at the notebook. The goal of the challenge is to perform all data manipulation using only SQL, and use python only to visualize the results:
+For more information on how to use the database and some context on the SQL queries on each file, have a look at the notebook. The goal of the notebook is to perform all data manipulation using only SQL, and use python only to visualize the results:
 
-[SQL Challenge: E-commerce data analysis](https://www.kaggle.com/code/terencicp/sql-challenge-e-commerce-data-analysis)
+[Kaggle notebook: SQL Challenge - E-commerce data analysis](https://www.kaggle.com/code/terencicp/sql-challenge-e-commerce-data-analysis)
 
 Each SQL statement in the .sql files is preceded by a comment that indicates the name of the python variable that contains the query in the notebook. For example, the following SQL query from this repository is preceded by the comment "orders_per_day":
 
