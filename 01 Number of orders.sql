@@ -61,7 +61,7 @@ SELECT
     COUNT(CASE WHEN hour = 23 THEN 1 END) AS "23"
 FROM OrderDayHour
 GROUP BY day_of_week_int
-ORDER BY day_of_week_int
+ORDER BY day_of_week_int;
 
 
 -- view_table('customers', 5)
