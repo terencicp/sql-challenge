@@ -1,4 +1,4 @@
-SQL Challenge: E-commerce data analysis
+# SQL Challenge: E-commerce data analysis
 
 The 11 .sql files contain the queries from a Kaggle notebook I wrote to showcase the capabilities of SQL for data analysis. To run these queries, download the SQLite database file from:
 
