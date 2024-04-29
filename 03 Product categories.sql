@@ -49,21 +49,20 @@ WHERE rank > 18;
 
 -- categories_by_median
 WITH OrderedCategories AS (
-	SELECT
-	    product_weight_g AS weight,
-	    product_category_name_english AS category,
-	    ROW_NUMBER() OVER(PARTITION BY product_category_name_english ORDER BY product_weight_g)
-	        AS category_row_n,
-	    COUNT(*) OVER(PARTITION BY product_category_name_english) AS category_count
-	FROM
-	    products
-	    JOIN order_items USING (product_id)
-	    JOIN product_category_name_translation USING (product_category_name)
-	WHERE
-		product_category_name_english IN ('health_beauty', 'watches_gifts', 'bed_bath_table',
-		    	'sports_leisure', 'computers_accessories', 'furniture_decor', 'housewares', 'cool_stuff',
-		    	'auto', 'toys', 'garden_tools', 'baby', 'perfumery', 'telephony', 'office_furniture',
-		    	'stationery', 'computers', 'pet_shop')
+    SELECT
+        product_weight_g AS weight,
+        product_category_name_english AS category,
+        ROW_NUMBER() OVER(PARTITION BY product_category_name_english ORDER BY product_weight_g)
+            AS category_row_n,
+        COUNT(*) OVER(PARTITION BY product_category_name_english) AS category_count
+    FROM
+        products
+        JOIN order_items USING (product_id)
+        JOIN product_category_name_translation USING (product_category_name)
+    WHERE product_category_name_english IN ('health_beauty', 'watches_gifts', 'bed_bath_table',
+        'sports_leisure', 'computers_accessories', 'furniture_decor', 'housewares', 'cool_stuff',
+        'auto', 'toys', 'garden_tools', 'baby', 'perfumery', 'telephony', 'office_furniture',
+        'stationery', 'computers', 'pet_shop')
 )
 SELECT category
 FROM OrderedCategories
