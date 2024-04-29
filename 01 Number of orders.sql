@@ -69,15 +69,15 @@ LIMIT 5;
 -- orders_per_city_reversed
 SELECT *
 FROM (
-	SELECT 
-	    customer_city AS customer_city,
-	    UPPER(customer_city) AS city,
-	    COUNT(orders.order_id) as city_order_count
-	FROM 
-	    customers
-	    JOIN orders USING (customer_id)
-	GROUP BY customer_city
-	ORDER BY city_order_count DESC
-	LIMIT 10
+    SELECT 
+        customer_city AS customer_city,
+        UPPER(customer_city) AS city,
+        COUNT(orders.order_id) as city_order_count
+    FROM 
+        customers
+        JOIN orders USING (customer_id)
+    GROUP BY customer_city
+    ORDER BY city_order_count DESC
+    LIMIT 10
 )
 ORDER BY city_order_count;
