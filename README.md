@@ -4,6 +4,6 @@ The 11 .sql files contain the queries from a Kaggle notebook I wrote to showcase
 
 [E-commerce dataset by Olist (SQLite)](https://www.kaggle.com/datasets/terencicp/e-commerce-dataset-by-olist-as-an-sqlite-database)
 
-For more information have a look at the original notebook:
+For more information on how to use the database and some context on the SQL queries on each file, have a look at the notebook:
 
 [SQL Challenge: E-commerce data analysis](https://www.kaggle.com/code/terencicp/sql-challenge-e-commerce-data-analysis)
