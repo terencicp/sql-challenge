@@ -11,7 +11,6 @@ SELECT *
 FROM geolocation
 LIMIT 5;
 
-
 -- avg_clv_per_zip_prefix
 WITH CLV AS (
     WITH CustomerData AS (
